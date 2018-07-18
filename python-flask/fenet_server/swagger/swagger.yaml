@@ -68,6 +68,16 @@ paths:
       responses:
         200:
           description: "Security content Image"
+          headers:
+            Cache-Control:
+              type: "integer"
+              description: "eliminate cache control"
+        206:
+          description: "Security content Image"
+          headers:
+            Cache-Control:
+              type: "integer"
+              description: "eliminate cache control"
         404:
           description: "The product with the given version does not exist."
         500:
@@ -77,5 +87,8 @@ paths:
           headers:
             Location:
               type: "string"
+            Server:
+              type: "string"
+              default: "fenet2"
       x-swagger-router-controller: "fenet_server.controllers.default_controller"
 definitions: {}
