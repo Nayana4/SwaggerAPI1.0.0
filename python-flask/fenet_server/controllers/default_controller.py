@@ -4,13 +4,13 @@ import six
 from fenet_server import util
 
 
-def fecontent_ge_sc_image(scParameters, Range=None):  # noqa: E501
+def fecontent_ge_sc_image(scParameter, Range=None):  # noqa: E501
     """Gets security content image
 
     Takes in the Product Name, Product Version, Channel and SC Channel to provide the image to download # noqa: E501
 
-    :param scParameters: The Product Name, Product Version, Channel and SC Channel
-    :type scParameters: str
+    :param scParameter: The Product Name, Product Version, Channel and SC Channel
+    :type scParameter: str
     :param Range: Range header for partial downloads
     :type Range: str
 

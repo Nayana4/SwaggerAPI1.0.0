@@ -18,7 +18,7 @@ class TestDefaultController(BaseTestCase):
         """
         headers = [('Range', 'Range_example')]
         response = self.client.open(
-            '/fenet2/1.0.0/feconten/{scParameter}'.format(scParameters='scParameters_example'),
+            '/fenet2/1.0.0/feconten/{scParameter}'.format(scParameter='scParameter_example'),
             method='GET',
             headers=headers)
         self.assert200(response,

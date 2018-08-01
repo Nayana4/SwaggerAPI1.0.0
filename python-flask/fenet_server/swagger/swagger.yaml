@@ -100,7 +100,7 @@ paths:
       produces:
       - "image/*"
       parameters:
-      - name: "scParameters"
+      - name: "scParameter"
         in: "path"
         description: "The Product Name, Product Version, Channel and SC Channel"
         required: true
