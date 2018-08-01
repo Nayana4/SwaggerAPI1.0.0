@@ -11,6 +11,19 @@ from fenet_server.test import BaseTestCase
 class TestDefaultController(BaseTestCase):
     """DefaultController integration test stubs"""
 
+    def test_fecontent_ge_sc_image(self):
+        """Test case for fecontent_ge_sc_image
+
+        Gets security content image
+        """
+        headers = [('Range', 'Range_example')]
+        response = self.client.open(
+            '/fenet2/1.0.0/feconten/{scParameter}'.format(scParameters='scParameters_example'),
+            method='GET',
+            headers=headers)
+        self.assert200(response,
+                       'Response body is : ' + response.data.decode('utf-8'))
+
     def test_fecontent_get_sc_image(self):
         """Test case for fecontent_get_sc_image
 
